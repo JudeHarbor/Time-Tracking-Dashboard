@@ -1,0 +1,154 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+html, body {
+    height: 100%; /* Ensure both html and body take up full height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+body {
+    background-color: hsl(226, 43%, 10%) !important;
+    height: 100%; /* Ensure body takes up full height */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    margin: auto;
+    margin-top: 10rem;
+    width: 90%;
+}
+
+
+.main-card .card {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 10px;
+
+    .inner-card {
+        background-color: hsl(246, 80%, 60%);
+        border-radius: 10px;
+    }
+
+    ul li {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-block: 2rem;
+
+        a {
+            text-decoration: none;
+            color: hsl(246, 80%, 60%);
+            transition: .5s;
+        }
+
+        a:hover {
+            color: white;
+        }
+    }
+}
+
+.othercards {
+    gap: 15%;
+
+    .cards {
+        height: 25%;
+        display: flex;
+
+        .inner-card {
+            width: 100%;
+        }
+
+        #work {
+            background-color: hsl(15, 100%, 70%);
+        }
+        #play {
+            background-color: hsl(195, 74%, 62%);
+        }
+        #study {
+            background-color: hsl(348, 100%, 68%);
+        }
+        #exercise {
+            background-color: hsl(145, 58%, 55%);
+
+            img {
+                width: 70px;
+            }
+        }
+        #social {
+            background-color: hsl(264, 64%, 52%);
+
+            img {
+                width: 40px;
+            }
+        }
+        #selfcare {
+            background-color: hsl(43, 84%, 65%);
+        }
+
+        .item {
+            padding-left: 0;
+            padding-right: 0;
+            border: none;
+            flex: 1 1 calc(30% - 20px);
+
+            img {
+                width: 50px;
+            }
+        }
+
+        .inner-card {
+            height: 80%;
+            background-color: hsl(235, 46%, 20%);
+            padding: 1rem;
+            color: white;
+            transition: .5s;
+        }
+
+        .inner-card:hover {
+            background-color: hsl(235, 45%, 61%);
+        }
+    }
+}
+
+
+@media (max-width: 1024px) {
+    body {
+        main {
+            margin-top: 3rem !important;
+            margin-bottom: 3rem;
+        }
+
+        .othercards {
+            gap: 30% !important;
+            .cards {
+                flex-direction: column;
+                margin-left: 2rem !important;
+                margin-right: 2rem !important;
+                padding-left: 0 !important; 
+                padding-right: 0 !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    body {
+        main {
+            flex-direction: column;
+            gap: 5rem;
+        }
+
+        .othercards {
+            width: 100% !important;
+            .cards {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding-left: 0 !important; 
+                padding-right: 0 !important;
+            }
+        }
+    }
+}
